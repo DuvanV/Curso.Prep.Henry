@@ -8,7 +8,7 @@
 	* Strings: es una cadena o secuencia de caracteres
 	* Funciones (argumentos, `return`): una función es una sección de un programa que calcula un valor de manera independiente al resto del programa.
 	* Declaraciones `if`: se utiliza para evaluar una expresión condicional: si se cumple la condición (es verdadera), ejecutará un bloque de código. Si es falsa, es posible ejecutar otras sentencias
-	* Valores booleanos (`true`, `false`): representan valores verdaderos o reales
+	* Valores booleanos (`true`, `false`): representan valores verdaderos o falsos
 
 
 2. Instalar Node y NPM. NPM se incluye con Node. https://nodejs.org/en/download/
