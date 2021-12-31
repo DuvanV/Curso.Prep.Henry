@@ -4,8 +4,8 @@
 ---
 1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
 
-* `for`
-* `&&`, `||`, `!`
+* `for`: estos son bucles que repiten determinada cantidad de veces la funcion detro de ellos
+* `&&`, `||`, `!`: estos son comparadores logicos el '&&' como si dijeramos 'y' o 'and' en el caso del ingles para comparar dos cosas, en programacion se utiliza cuando se quiere condicinar dos valores o situaciones y que los dos se cumplan. EL '||' es equivalente a decir 'o' o 'or' en el caso del ingles y lo usamos cuando esperamos que al menos una de dos o mas condiciones se cumplan. Por ultimo el '!' que cuando cuando decimos que algo no se cumple.
 
 2. Desde la carpeta `Prep` en la carpeta donde clonaste el repo, ingresa el comando `npm test JSII.test.js` para correr los tests automatizados. Al principio, todos los tests estarán fallados/rotos. Encontrarás las funciones para hacer pasar los tests en el archivo `homework.js`.
 
