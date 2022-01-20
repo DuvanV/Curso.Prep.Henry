@@ -26,10 +26,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var array2 = [];
-  for (let i = 0; i < array.length; i++) {
+  var array2 = array.map(x=>x+1);
+
+  /*for (let i = 0; i < array.length; i++) {
     array2[i] = array[i]+1;
-  }
+  }*/
   return array2;
 }
 
@@ -88,10 +89,10 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var resultado=0;
-  for (let i = 0; i < numeros.length; i++) {
+  var resultado = numeros.reduce((acc,cur)=>acc+cur);
+  /*for (let i = 0; i < numeros.length; i++) {
     resultado += numeros[i];
-  }
+  }*/
   return resultado;
 }
 
@@ -100,11 +101,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var valor = 0;
-  for (let i = 0; i < resultadosTest.length; i++) {
+  var valor = (resultadosTest.reduce((acc,cur)=>acc+cur))/resultadosTest.length;
+  /*for (let i = 0; i < resultadosTest.length; i++) {
     valor = valor+resultadosTest[i];
-  }
-  return valor/resultadosTest.length;
+  }*/
+  return valor;
 }
 
 
@@ -140,13 +141,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  var elementos = 0;
-  for (let i = 0; i < arreglo.length; i++) {
+  var elementos = arreglo.filter(num=>num>18);
+  /*for (let i = 0; i < arreglo.length; i++) {
     if (arreglo[i]>18) {
       elementos++;
     }
-  }
-  return elementos;
+  }*/
+  return elementos.length;
 }
 
 
@@ -195,14 +196,14 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  var meses = [];
-  let pos = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i]==="Enero"||array[i]==="Marzo"||array[i]==="Noviembre") {
-      meses[pos]= array[i];
-      pos++;
+  function siEs(elemento) {
+    if (elemento==="Enero"||elemento==="Marzo"||elemento==="Noviembre") {
+      return true;
+    }else{
+      return false;
     }
   }
+  var meses = array.filter(siEs);
   if (meses.length===3) {
     return meses;
   } else {
@@ -215,14 +216,14 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  var nuevoArray = [];
-  let pos = 0;
+  var nuevoArray = array.filter(num=>num>100);
+  /*let pos = 0;
   for (let i = 0; i < array.length; i++) {
     if (array[i]>100) {
       nuevoArray[pos] = array[i];
       pos++;
     }
-  }
+  }*/
   return nuevoArray;
 }
 
